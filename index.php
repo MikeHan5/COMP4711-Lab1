@@ -41,6 +41,17 @@ and open the template in the editor.
             
             $students['a456'] = $second;
             
+            // Third Student
+            $third = new Student();
+            $third -> surname = "Han";
+            $third -> first_name = "Mike";
+            $third ->add_email("home", "mhan@gmail.com");
+            $third->add_grade(100);
+            $third->add_grade(100);
+            $third->add_grade(99);
+            
+            $students['a123'] = $third;
+            
             // Sorting the students array()
             ksort($students);
             
@@ -48,7 +59,6 @@ and open the template in the editor.
             foreach ($students as $student){
                 echo $student -> toString();
             }
-            echo "Hello out there ... I live";
         ?>
     </body>
 </html>
