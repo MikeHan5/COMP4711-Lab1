@@ -18,12 +18,12 @@ class Student{
     
     // function to add email to student
     function add_email($which, $address){
-        $this -> emails[$which] = address;
+        $this -> emails[$which] = $address;
     }
     
     // function to add grade to student
     function add_grade($grade){
-        $this -> grade[] = $grade;
+        $this -> grades[] = $grade;
     }
     
     // function to calculate the average grade of a student
@@ -31,13 +31,13 @@ class Student{
         $total = 0;
         foreach ($this -> grades as $value){
             $total += $value;
-            return $total / count($this -> grades);
         }
+        return $total / count($this -> grades);
     }
     
     function toString(){
-        $result = $this -> first_name . ' ' . $this->surname;
-        $result .= ' (' . $this->average() . ")\n";
+        $result = $this -> first_name . ' ' . $this -> surname;
+        $result .= ' (' . $this -> average() . ")\n";
         foreach($this -> emails as $which => $what){
             $result .= $which . ': ' . $what . "\n";
         }

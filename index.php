@@ -39,7 +39,10 @@ and open the template in the editor.
             $second ->add_grade(80);
             $second ->add_grade(50);
             
-            $Students['a456'] = $second;
+            $students['a456'] = $second;
+            
+            // Sorting the students array()
+            ksort($students);
             
             
             foreach ($students as $student){
